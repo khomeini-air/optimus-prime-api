@@ -16,7 +16,7 @@ And it is completely free for anyone to use it, so try it out !! 🎉🎉🥳
 
 
 
-For each API url below please use the following base url: https://optimusprimes.gigalixirapp.com/
+For each API url below please use the following base url: https://optimusprime.gigalixirapp.com/
 
 
 
@@ -25,11 +25,17 @@ For each API url below please use the following base url: https://optimusprimes.
 The primality test API will determine whether an input number `n` is prime. For example `n = 13` is prime and `n = 14` is not a prime.
 
 url: `/api/prime/primality/n`
+
 Http method: `GET`
+
 Response: `{"n": n, "is_prime" : true/false}`
 
+
+
 Example:
+
 Request: `/api/prime/primality/13`
+
 Response: `{"n": 13, "is_prime" : true}`
 
 
@@ -41,11 +47,17 @@ The Fundamental Theorem of Arithmetics states that each natural number `n` has a
 The Prime Factors API will compute such factorization for you.
 
 url: `/api/prime/prime_factor/n`
+
 Http method: `GET`
+
 Response : `{"n": n, "prime_factor": [list_of_factor]}`
 
+
+
 Example:
+
 Request : `/api/prime/prime_factor/27`
+
 Response: `{"n": 27, "prime_factor": [3,3,3]}`
 
 
@@ -64,10 +76,16 @@ Below table describes each request parameters:
 | 3    | offset    | the amount of prime number | minimum 0, maximum 100 |
 
 url: `/api/prime/prime_lte/n?limit=l&offset=o`
+
 Http method: `GET`
+
 Response : `{"n": n, "limit": l, "offset": o, "prime_lte": [list_of_primes]}`
 
+
+
 Example:
+
 Request : `/api/prime/prime_lte/20?limit=2&offset=3`
+
 Response: `{"n": 10, "limit": 2, "offset":3, "prime_lte": [2,3,5,7]}`
 
